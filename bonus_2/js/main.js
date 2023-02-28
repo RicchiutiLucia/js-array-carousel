@@ -19,7 +19,7 @@ for(let i = 0; i < imagesArray.length; i++){
 
     imageContent += newImageWrapper;
 
-    const newImageRight = ` <div class="right-image">
+    const newImageRight = ` <div class="img-right">
                                 <img class="image" src="${imagesArray[i]}">
                             </div>`;
 
