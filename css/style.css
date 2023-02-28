@@ -19,7 +19,7 @@
 }
 .img-wrapper{
     height: 100%;
-    /*display: none;*/
+    display: none;
 }
 .img-wrapper.show{
     display: block;
@@ -30,8 +30,14 @@
 #next{
     right:20px;
 }
+#next .hide{
+    display: none;
+}
 #prev{
     left:20px;
+}
+#prev .hide{
+    display: none;
 }
 .nav{
     position: absolute;
@@ -46,4 +52,18 @@
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
+}
+.circle-container{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: beige;
+    margin: 0 5px;
 }
