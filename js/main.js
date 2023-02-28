@@ -19,3 +19,36 @@ for(let i = 0; i < imagesArray.length; i++){
 }
 
 imageListDom.innerHTML = imageContent;
+
+const imagesWrapperDom = document.getElementsByClassName('img-wrapper');
+//console.log(imageWrapperDom);
+
+let activeImage = 0;
+imagesWrapperDom[activeImage].classList.add('show');
+
+const nextDom = document.querySelector('#next');
+const prevDom = document.querySelector('#prev');
+
+nextDom.addEventListener('click', 
+    function(){
+        if(activeImage < imagesWrapperDom.length -1){
+            imagesWrapperDom[activeImage].classList.remove('show');
+            activeImage++;
+            imagesWrapperDom[activeImage].classList.add('show');
+        }
+        
+    }
+);
+
+prevDom.addEventListener('click', 
+    function(){
+        if(activeImage > 0){
+            imagesWrapperDom[activeImage].classList.remove('show');
+            activeImage--;
+            imagesWrapperDom[activeImage].classList.add('show');
+
+        }
+        
+    }
+);
+
